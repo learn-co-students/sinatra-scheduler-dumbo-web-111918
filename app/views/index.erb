@@ -1,0 +1,13 @@
+
+<h1>All courses</h1>
+<%count = 0%>
+<% Course.all.each do |course|%>
+<ul>
+    <li>
+        <a href="courses/<%=course.id%>"> <%= course.name%>
+        <% count += course.credits.to_i%>
+    </li>
+</ul>
+<% end%>
+
+

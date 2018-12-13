@@ -1,0 +1,19 @@
+<ul>
+  <li>
+    Name:
+    <input type="text" name="course[name]" value="<%=@course.name%>" >
+    </li>
+  <li>
+    Professor:
+    <select name="course[professor]">
+      <% Course.all.each do |course| %>
+        <option <%= course.professor == @course.professor ? "selected" : "" %> value="<%= course.professor %>"><%= course.professor %></option>
+      <% end %>
+    </select>
+  </li>
+  <li>
+    Credits:
+    <input type="number" name="course[credits]" value="<%= @course.credits %>">
+  </li>
+    
+</ul>
