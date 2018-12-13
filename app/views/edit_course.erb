@@ -1,0 +1,7 @@
+<form action="/courses/<%= @course.id %>" method="post">
+	<p>Course Name:</p><input name="name" value="<%= @course.name %>"></input>
+	<p>Course Teacher:</p><input name="professor" value="<%= @course.professor %>"></input>
+	<p>Course Credits:</p><input name="credits" value="<%= @course.credits %>"></input>
+	<input type="hidden" name="_method" value="PUT" />
+	<input type="submit"></input>
+</form>

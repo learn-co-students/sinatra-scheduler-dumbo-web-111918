@@ -1,0 +1,9 @@
+<ol>
+<% Course.all.each do |c| %>
+<li>
+	<a href="/courses/<%= c.id %>"><%= c.name %></a>
+</li>
+<br />
+<% end %>
+</ol>
+<a href="/courses/new">New Course</a>
