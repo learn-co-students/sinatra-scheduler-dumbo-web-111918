@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/courses">Courses</a></li>
+      <li><a href="/schedule">Schedule</a></li>
+    </ul>
+  </div>
+</nav>
+  <h1>Hermione's Hogwarts Scheduler</h1>
+<br><br>
+
+<h1>Course Information:</h1>
+
+<ul>
+<li>
+Course Name:  <%=  @course.name%>
+<br><br></li>
+<li>
+Professor: <%= @course.professor %>
+</li>
+<li>
+Credits: <%= @course.credits %>
+
+</li>
+</ul>
+<h2><a href="/courses/<%= @course.id %>/edit">Edit <%= @course.name %></a><h/>
+
+</body>
