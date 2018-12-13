@@ -1,3 +1,5 @@
+Course.delete_all
+
 courses = [
   {
     name: 'Transfiguration',
@@ -57,3 +59,5 @@ courses = [
     credits: 1
   }
 ]
+
+Course.create(courses)

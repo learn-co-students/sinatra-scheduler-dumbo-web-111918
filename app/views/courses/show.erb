@@ -1,0 +1,11 @@
+<h1>Course name: <%=@course.name%></h1>
+<h2>Professor: <%=@course.professor%></h2>
+<h2>Credits: <%=@course.credits%></h2>
+
+<a href="/courses/<%=@course.id%>/edit">Edit Course </a>
+
+<form action="/courses/<%=@course.id%>" method= "POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete <%=@course.name%>">
+
+</form>
