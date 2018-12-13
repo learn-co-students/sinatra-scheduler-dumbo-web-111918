@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Courses:</h1>
+    <ul>
+      <% @courses.each do |i| %>
+      <li><a href="courses/<%=i.id%>"> <%= i.name %> </a></li>
+      <% end %>
+    </ul>
+    <br>
+    <a href="/courses/new"> Add A Course</a>
+    <br>
+    <a href="/courses/delete"> Remove A Course</a>
+  </body>
+</html>

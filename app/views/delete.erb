@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Remove a Course</h1>
+
+    <form class="" action="/courses" method="post">
+      <input id = "hidden" type="hidden" name="_method" value="delete">
+      <% @courses.all.each do |course| %>
+        <br>
+        <input type="checkbox" name="course_id[<%=course.id%>]" value="<%=course.id%>"><%=course.name%> </input>
+
+      <% end %>
+      <input type="submit">
+    </form>
+  </body>
+</html>

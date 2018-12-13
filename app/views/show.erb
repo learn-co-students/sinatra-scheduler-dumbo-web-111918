@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> <%=@course.name %></h1>
+      <ul>Professor : <%=@course.professor%></ul>
+      <ul>Credit Amount: <%=@course.credits%></ul>
+      <br>
+      <a href="/courses/<%=@course.id%>/edit">Edit this course</a>
+  </body>
+</html>

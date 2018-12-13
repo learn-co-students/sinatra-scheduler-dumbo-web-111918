@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Editing <%=@course.name%></h1>
+    <form class="" action="/courses/<%=@course.id%>" method="post">
+      <input id = "hidden" type="hidden" name="_method" value="PATCH">
+      <p> Course Name: <input type="text" name="course[name]" value=""></p>
+      <p> Professor: <input type="text" name="course[professor]" value=""></p>
+      <p> Credit Number: <input type="text" name="course[credits]" value=""></p>
+      <input type="submit" name="" value="EDIT COURSE">
+    </form>
+
+  </body>
+</html>
