@@ -57,3 +57,5 @@ courses = [
     credits: 1
   }
 ]
+
+Course.create(courses)

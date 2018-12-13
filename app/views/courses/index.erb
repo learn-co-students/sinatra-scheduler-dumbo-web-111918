@@ -2,6 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
 </head>
 <body>
   <nav>
@@ -12,7 +13,18 @@
   </div>
 </nav>
   <h1>Hermione's Hogwarts Scheduler</h1>
-  <div class="img-container">
-    <img src="https://pottercosplay.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/q/q/qq_20170608173020.jpg" alt="time-turner">
-  </div>
+<br><br>
+
+<h1>All Possible Courses:</h1>
+<% @courses.each do |course| %>
+<ul>
+<li>
+  <a href= "/courses/<%= course.id %>">
+  <%=  "#{course.name}" %>
+
+</li>
+
+</ul>
+<% end %>
+
 </body>

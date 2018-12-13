@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<body>
+  <nav>
+    <ul>
+      <li><a href="/courses">Courses</a></li>
+      <li><a href="/schedule">Schedule</a></li>
+    </ul>
+  </div>
+</nav>
+  <h1>Hermione's Hogwarts Scheduler</h1>
+<br><br>
+
+<h1>Edit <%=  @course.name%> Course:</h1>
+<form action="/courses/<%=@course.id%>" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+
+<ul>
+<li>
+Course Name:
+<input type="text" name="course[name]" value="<%=  @course.name%>">
+</li><li>
+Professor:
+<input type="text" name="course[professor]" value="<%= @course.professor %>">
+</li><li>
+Credits:
+<input type="number" name="course[credits]" value="<%= @course.credits %>">
+
+</li>
+</ul>
+
+<input type="submit" name="Edit" value="Edit <%= @course.name %>">
+
+</form>
+
+
+
+
+</body>
