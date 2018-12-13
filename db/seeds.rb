@@ -1,3 +1,5 @@
+Course.delete_all
+
 courses = [
   {
     name: 'Transfiguration',
