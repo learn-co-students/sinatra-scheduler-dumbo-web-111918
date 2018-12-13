@@ -1,0 +1,6 @@
+<h1>Editing <%= @course.name%></h1>
+<form action="/courses/<%=@course.id%>" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <%= erb :_form%>
+    <input type="submit" value="Edit <%=@course.name%>">
+</form>

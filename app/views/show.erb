@@ -1,0 +1,8 @@
+<h2>This is the information regarding the course of <%= @course.name%>.</h2>
+
+<ul>
+    <li>The professor that teaches this course is <%=@course.professor %></li>
+    <li>The amount of credits this course grants you is <%=@course.credits%></li>
+</ul>
+
+<a href="/courses/<%=@course.id%>/edit">edit course</a>
