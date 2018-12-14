@@ -1,0 +1,15 @@
+Sorry that course could not be added to you class because it would have exceded the credits! Maximum cedits allowed are 15!
+
+<% @class.each do |sched| %>
+<ul>
+<a href= "courses/<%= sched.id %>"><h1> <%=  sched.name %> </h1> </a>
+<h2><%= sched.professor %></h2>
+<p><%= sched.credits %></p>
+</ul>
+<% end %>
+
+<h3>Total Credits: </h3><%= @new_ar.reduce(:+) %>
+<break>
+
+<h2><a href= "/schedule/new"> Add Course to Schedule </a></h2>
+<h2><a href= "/schedule/delete"> Remove course from schedule</a></h2>
