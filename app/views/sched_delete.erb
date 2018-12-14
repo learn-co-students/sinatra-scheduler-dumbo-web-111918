@@ -1,0 +1,10 @@
+
+<form action="/schedule" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+<select name= "classe[course_id]">
+  <% @class.each do |c| %>
+  <option value="<%= c.id %>"><%= c.name %>  <%= c.credits %> </option>
+      <% end %>
+    </select>
+ <input type="submit" name="Delete">
+ </form>
